@@ -1,4 +1,4 @@
-import Navbar from "@/components/Header";
+// import Navbar from "@/components/Header";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         "
       >
         <ThemeProvider attribute="class" defaultTheme="system">
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </ThemeProvider>
       </body>
