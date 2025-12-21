@@ -90,15 +90,14 @@ export default function Header() {
     <>
       {/* HEADER */}
       <header
+        style={{ "--header-height": "4rem" }}
         className={`
-          fixed top-0 inset-x-0 z-50
-          h-16
-          bg-white dark:bg-gray-900
-          border-b border-gray-200 dark:border-gray-800
-          transition-transform duration-300 ease-out
-          will-change-transform
-          ${isVisible ? "translate-y-0" : "-translate-y-full"}
-        `}
+    fixed top-0 inset-x-0 z-50
+    h-16
+    bg-white dark:bg-gray-900
+    transition-transform duration-300
+    ${isVisible ? "translate-y-0" : "-translate-y-full"}
+  `}
       >
         <nav className="container mx-auto px-4 h-full flex items-center justify-between">
           {/* Hamburger */}
