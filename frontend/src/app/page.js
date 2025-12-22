@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero/Hero";
 import Features from "@/components/sections/Features/Features";
 import Header from "@/components/layout/Header/Header";
+import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 export default function Home() {
   return (
     <main>
@@ -9,6 +10,7 @@ export default function Home() {
         <div className="bg-white dark:bg-black flex flex-col justify-center">
           <Hero />
           <Features />
+          <HowItWorks />
           <div className="mt-3 p-8 ">
             <p>
               Lorem ipsum dolor Lorem ipsum dolor sit amet, consectetur
