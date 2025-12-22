@@ -1,4 +1,4 @@
-import FeaturesList from "@/components/features/FeaturesList";
+import FeaturesList from "@/components/sections/Features/FeaturesList";
 
 const Features = () => {
   return (

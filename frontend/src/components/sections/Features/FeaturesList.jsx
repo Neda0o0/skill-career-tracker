@@ -1,4 +1,4 @@
-import featuresData from "@/components/features/features.data";
+import featuresData from "@/components/sections/Features/features.data";
 
 const FeaturesList = () => {
   return (

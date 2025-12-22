@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Button from "./ui/Button";
+import Button from "@/components/ui/Button";
 
-const Banner = () => {
+const Hero = () => {
   return (
     <>
       <div className="bg-white mt-3 p-8 w-full flex items-center shadow-sm hover:shadow-md transition-shadow duration-200 dark:shadow-none">
@@ -24,8 +24,8 @@ const Banner = () => {
             unlock new opportunities.
           </p>
           <div className="flex gap-4 items-center justify-center md:justify-start">
-            <Button>Click Me</Button>
-            <Button variant="outline">Submit</Button>
+            <Button>Get Started</Button>
+            <Button variant="outline">View Dashboard</Button>
           </div>
         </div>
       </div>
@@ -33,4 +33,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Hero;

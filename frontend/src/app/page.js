@@ -1,13 +1,13 @@
-import Banner from "@/components/Banner";
-import Features from "@/components/features/Features";
-import Navbar from "@/components/Header";
+import Hero from "@/components/sections/Hero/Hero";
+import Features from "@/components/sections/Features/Features";
+import Header from "@/components/layout/Header/Header";
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Header />
       <div className="max-w-7xl mx-auto px-4">
         <div className="bg-white dark:bg-black flex flex-col justify-center">
-          <Banner />
+          <Hero />
           <Features />
           <div className="mt-3 p-8 ">
             <p>
