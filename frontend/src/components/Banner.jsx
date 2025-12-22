@@ -16,8 +16,8 @@ const Banner = () => {
         </div>
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4">
-            Track your skills. <br />
-            Build your career.
+            Track your skills, <br />
+            Build your career!
           </h1>
           <p className="font-semibold mb-4 md:w-[50%]">
             Discover your strengths, set goals, and visualize your progress to

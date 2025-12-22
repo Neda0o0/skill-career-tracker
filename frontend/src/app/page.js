@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner";
+import Features from "@/components/features/Features";
 import Navbar from "@/components/Header";
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="bg-white dark:bg-black flex flex-col justify-center">
           <Banner />
+          <Features />
           <div className="mt-3 p-8 ">
             <p>
               Lorem ipsum dolor Lorem ipsum dolor sit amet, consectetur
