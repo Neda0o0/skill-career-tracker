@@ -25,7 +25,7 @@ const Hero = () => {
           </p>
           <div className="flex gap-4 items-center justify-center md:justify-start">
             <Button>Get Started</Button>
-            <Button variant="outline">View Dashboard</Button>
+            <Button variant="primaryOutline">View Dashboard</Button>
           </div>
         </div>
       </div>
