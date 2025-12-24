@@ -3,6 +3,7 @@ import Features from "@/components/sections/Features/Features";
 import Header from "@/components/layout/Header/Header";
 import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import Pricing from "@/components/sections/Pricing/Pricing";
+import Testimonials from "@/components/sections/Testimonials/Testimonials";
 export default function Home() {
   return (
     <main>
@@ -13,6 +14,7 @@ export default function Home() {
           <Features />
           <HowItWorks />
           <Pricing />
+          <Testimonials />
         </div>
       </div>
     </main>
