@@ -2,7 +2,10 @@ import FeaturesList from "@/components/sections/Features/FeaturesList";
 
 const Features = () => {
   return (
-    <section className="flex flex-col justify-center items-center p-4">
+    <section
+      id="features"
+      className="flex flex-col justify-center items-center p-4"
+    >
       <span className="text-xs font-medium tracking-widest text-gray-500">
         FEATURES
       </span>

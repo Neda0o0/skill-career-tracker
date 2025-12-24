@@ -5,10 +5,11 @@ import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import Pricing from "@/components/sections/Pricing/Pricing";
 import Testimonials from "@/components/sections/Testimonials/Testimonials";
 import CTA from "@/components/sections/CTA/CTA";
+import Footer from "@/components/layout/Footer/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main id="home">
       <Header />
       <div className="max-w-7xl mx-auto px-4">
         <div className="bg-white dark:bg-black flex flex-col justify-center">
@@ -18,6 +19,7 @@ export default function Home() {
           <Testimonials />
           <Pricing />
           <CTA />
+          <Footer />
         </div>
       </div>
     </main>

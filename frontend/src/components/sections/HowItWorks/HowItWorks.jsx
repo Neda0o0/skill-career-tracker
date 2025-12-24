@@ -2,7 +2,10 @@ import HowItWorksData from "@/components/sections/HowItWorks/howItWorks.data";
 
 const HowItWorks = () => {
   return (
-    <section className="flex flex-col justify-center items-center p-4">
+    <section
+      id="howItWorks"
+      className="flex flex-col justify-center items-center p-4"
+    >
       <span className="text-xs font-medium tracking-widest text-gray-500">
         HOW IT WORKS
       </span>

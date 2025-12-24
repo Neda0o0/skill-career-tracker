@@ -4,7 +4,10 @@ import RatingStars from "@/components/sections/Testimonials/RatingStars";
 
 const Testimonials = () => {
   return (
-    <section className="flex flex-col justify-center items-center p-4">
+    <section
+      id="testimonials"
+      className="flex flex-col justify-center items-center p-4"
+    >
       <span className="text-xs font-medium tracking-widest text-gray-500 uppercase">
         Testimonials
       </span>

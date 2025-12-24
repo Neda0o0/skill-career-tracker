@@ -2,7 +2,10 @@ import pricingPlans from "@/components/sections/Pricing/pricing.data";
 
 const Pricing = () => {
   return (
-    <section className="flex flex-col justify-center items-center p-4">
+    <section
+      id="pricing"
+      className="flex flex-col justify-center items-center p-4"
+    >
       <span className="text-xs font-medium tracking-widest text-gray-500">
         PRICING
       </span>
