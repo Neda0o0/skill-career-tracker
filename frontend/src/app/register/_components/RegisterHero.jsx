@@ -27,8 +27,8 @@ const RegisterHero = () => {
     },
   ];
   return (
-    <section className="bg-amber-400 md:h-screen">
-      <div className="p-5 flex flex-col gap-10">
+    <section className="bg-amber-400 h-full flex flex-col">
+      <div className="p-5 flex flex-col gap-10 flex-1 justify-between">
         {/* Brand */}
         <div className=" flex items-center gap-2">
           <Image
@@ -42,18 +42,18 @@ const RegisterHero = () => {
 
         {/* Value Proposition */}
         <div>
-          <h1 className="md:text-5xl text-3xl font-extrabold">
+          <h1 className="md:text-6xl text-5xl font-extrabold">
             Start Your Growth Journey
           </h1>
         </div>
 
         {/* Core Content */}
-        <div className="flex justify-between items-center gap-10">
+        <div className="flex flex-col-reverse md:flex-row md:justify-between items-center gap-10">
           {/* Benefits */}
           <ul className="flex flex-col gap-4">
             {BENEFITS.map(({ id, label, Icon }) => (
-              <li key={id} className="flex items-center gap-3">
-                <Icon size={14} weight="light" />
+              <li key={id} className="flex items-center gap-3 text-2xl">
+                <Icon size={24} weight="light" />
                 <span className="text-gray-300">{label}</span>
               </li>
             ))}
@@ -69,7 +69,7 @@ const RegisterHero = () => {
         </div>
 
         {/* Social Proof */}
-        <div className="text-gray-300 text-center">
+        <div className="text-gray-300 text-center mt-10">
           Join 10,000+ professionals
         </div>
       </div>
