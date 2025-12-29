@@ -20,9 +20,8 @@ const RegisterForm = () => {
 
         {/* Divider */}
         <div className="flex items-center gap-3 text-sm text-gray-400">
-          <span className="flex-1 h-px bg-gray-200">
-            or continue with email
-          </span>
+          <span className="flex-1 h-px bg-gray-200"></span>
+          or continue with email
           <span className="flex-1 h-px bg-gray-200" />
         </div>
 
