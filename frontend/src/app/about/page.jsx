@@ -1,4 +1,3 @@
-import Footer from "@/components/layout/Footer/Footer";
 import Header from "@/components/layout/Header/Header";
 import AboutHero from "@/app/about/_components/AboutHero";
 import AboutProblem from "@/app/about/_components/AboutProblem";
@@ -11,7 +10,8 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="max-w-7xl mx-auto px-4">
+      <main>
+        {/* className="max-w-7xl mx-auto px-4" */}
         <AboutHero />
         <AboutProblem />
         <AboutSolution />
@@ -19,7 +19,6 @@ const AboutUs = () => {
         <AboutTrust />
         <AboutCTA />
       </main>
-      <Footer />
     </div>
   );
 };
