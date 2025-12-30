@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header/Header";
 import AboutHero from "@/app/about/_components/AboutHero";
 import AboutProblem from "@/app/about/_components/AboutProblem";
 import AboutSolution from "@/app/about/_components/AboutSolution";
+import AboutValues from "@/app/about/_components/AboutValues";
 
 const AboutUs = () => {
   return (
@@ -12,8 +13,8 @@ const AboutUs = () => {
         <AboutHero />
         <AboutProblem />
         <AboutSolution />
+        <AboutValues />
         {/*
-          <AboutValues />
           <AboutMission />
           <AboutTrust />
           <AboutCTA /> */}
