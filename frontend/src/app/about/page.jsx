@@ -2,6 +2,7 @@ import Footer from "@/components/layout/Footer/Footer";
 import Header from "@/components/layout/Header/Header";
 import AboutHero from "@/app/about/_components/AboutHero";
 import AboutProblem from "@/app/about/_components/AboutProblem";
+import AboutSolution from "@/app/about/_components/AboutSolution";
 
 const AboutUs = () => {
   return (
@@ -10,8 +11,8 @@ const AboutUs = () => {
       <main className="max-w-7xl mx-auto px-4">
         <AboutHero />
         <AboutProblem />
+        <AboutSolution />
         {/*
-          <AboutSolution />
           <AboutValues />
           <AboutMission />
           <AboutTrust />
