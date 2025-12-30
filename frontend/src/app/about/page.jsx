@@ -4,6 +4,7 @@ import AboutHero from "@/app/about/_components/AboutHero";
 import AboutProblem from "@/app/about/_components/AboutProblem";
 import AboutSolution from "@/app/about/_components/AboutSolution";
 import AboutValues from "@/app/about/_components/AboutValues";
+import AboutTrust from "@/app/about/_components/AboutTrust";
 
 const AboutUs = () => {
   return (
@@ -14,9 +15,9 @@ const AboutUs = () => {
         <AboutProblem />
         <AboutSolution />
         <AboutValues />
+        <AboutTrust />
         {/*
           <AboutMission />
-          <AboutTrust />
           <AboutCTA /> */}
       </main>
       <Footer />
