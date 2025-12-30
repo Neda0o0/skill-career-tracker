@@ -1,6 +1,7 @@
 import Footer from "@/components/layout/Footer/Footer";
 import Header from "@/components/layout/Header/Header";
 import AboutHero from "@/app/about/_components/AboutHero";
+import AboutProblem from "@/app/about/_components/AboutProblem";
 
 const AboutUs = () => {
   return (
@@ -8,6 +9,13 @@ const AboutUs = () => {
       <Header />
       <main>
         <AboutHero />
+        <AboutProblem />
+        {/*
+          <AboutSolution />
+          <AboutValues />
+          <AboutMission />
+          <AboutTrust />
+          <AboutCTA /> */}
       </main>
       <Footer />
     </div>

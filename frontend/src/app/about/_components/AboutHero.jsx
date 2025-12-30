@@ -5,7 +5,7 @@ const AboutHero = () => {
     <section className="px-6 py-20">
       <div
         style={{ backgroundColor: "#0b3d60" }}
-        className="rounded-2xl mx-auto max-w-lg px-6 py-20 flex flex-col items-center text-center gap-8"
+        className="rounded-2xl mx-auto max-w-8xl px-6 py-20 flex flex-col items-center text-center gap-8"
       >
         {/* Text Content */}
         <div className="space-y-4 p-5 flex flex-col gap-8">
