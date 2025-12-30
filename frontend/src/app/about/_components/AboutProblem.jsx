@@ -8,8 +8,9 @@ const AboutProblem = () => {
         <p>
           Today, learning resources are everywhere. Courses, tutorials, videos,
           and communities are just one click away. But without a clear path,
-          most people don’t know what to learn next, how far they’ve come, or
-          whether their effort is actually paying off.
+          most people don’t know
+          <strong>what to learn next, how far they’ve come</strong>, or
+          <strong>whether their effort is actually paying off</strong>.
         </p>
       </div>
     </section>
