@@ -31,31 +31,37 @@ const AboutValues = () => {
     },
   ];
   return (
-    <section>
-      <div>
-        {/* Headline (Belief) */}
-        <h1>What we believe shapes everything we build.</h1>
+    <section className="p-10">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col gap-8">
+        <div className="flex flex-col gap-4 justify-center items-center">
+          {/* Headline (Belief) */}
+          <h2 className="text-2xl font-semibold">
+            What we believe shapes everything we build.
+          </h2>
 
-        {/* Values Context (Why Values Matter) */}
-        <p>
-          At SkillTrack, values are not statements on a wall. They guide how we
-          design experiences, make decisions, and support learners at every
-          step. These principles keep us focused on what truly matters: real
-          growth, real people, and real outcomes.
-        </p>
+          {/* Values Context (Why Values Matter) */}
+          <p>
+            At SkillTrack, values are not statements on a wall. They guide how
+            we design experiences, make decisions, and support learners at every
+            step. These principles keep us focused on what truly matters: real
+            growth, real people, and real outcomes.
+          </p>
+        </div>
 
         {/* Core Values (Scannable) */}
-        <ul>
+        <ul className="flex justify-between gap-8 flex-col md:flex-row">
           {coreValues.map(({ id, label, description }) => (
-            <li key={id}>
-              <h2>{label}</h2>
+            <li key={id} className="shadow-md rounded-2xl p-5">
+              <h3 className="text-lg font-semibold flex justify-center">
+                {label}
+              </h3>
               <p>{description}</p>
             </li>
           ))}
         </ul>
 
         {/* Closing Statement (Identity) */}
-        <p>
+        <p className="flex justify-center italic">
           These values shape how SkillTrack grows — alongside the people who use
           it.
         </p>
