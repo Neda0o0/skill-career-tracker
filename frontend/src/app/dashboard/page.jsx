@@ -1,5 +1,16 @@
-const dashboard = () => {
-  return <div>Enter</div>;
+import DashboardHeader from "@/app/dashboard/_components/DashboardHeader";
+
+const DashboardPage = () => {
+  return (
+    <>
+      {/* DashboardHeader */}
+      <DashboardHeader />
+
+      <section>{/* Stats */}</section>
+
+      <section>{/* Main content */}</section>
+    </>
+  );
 };
 
-export default dashboard;
+export default DashboardPage;

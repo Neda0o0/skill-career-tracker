@@ -8,7 +8,6 @@ export default function RootLayout({ children }) {
         className="
           bg-white dark:bg-gray-950
           text-gray-900 dark:text-gray-100
-          pt-16
         "
       >
         <ThemeProvider attribute="class" defaultTheme="system">

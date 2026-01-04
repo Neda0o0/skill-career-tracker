@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main id="home">
       <Header />
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 pt-16">
         <div className="bg-white dark:bg-black flex flex-col justify-center">
           <Hero />
           <Features />
