@@ -45,7 +45,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <section className="w-64 shadow-md min-h-screen">
+    <section className="w-64 shadow-md min-h-screen z-10">
       <div className="flex flex-col py-8">
         <div className="flex flex-col justify-center items-center">
           <Image

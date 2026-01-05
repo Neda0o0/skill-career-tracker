@@ -7,7 +7,7 @@ import UserStatusBell from "@/app/dashboard/_components/UserStatusBell";
 
 const DashboardHeader = () => {
   return (
-    <header className="w-full shadow-sm">
+    <header className="w-full shadow-sm z-11">
       <div className="px-2 flex justify-between items-center">
         <div className="flex items-center">
           <Image src={"/images/Logo1.png"} alt="Logo" width={120} height={60} />
