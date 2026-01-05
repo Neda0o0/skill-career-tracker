@@ -1,7 +1,9 @@
+"use client";
+
 import SearchInput from "@/components/SearchInput";
 import Image from "next/image";
-import { Bell } from "lucide-react";
 import { ChevronDown } from "lucide-react";
+import UserStatusBell from "@/app/dashboard/_components/UserStatusBell";
 
 const DashboardHeader = () => {
   return (
@@ -18,18 +20,17 @@ const DashboardHeader = () => {
         </div>
         <div className="flex flex-row gap-4 items-center">
           <div className="relative mr-2">
-            <Bell className="h-5 w-5 cursor-pointer" />
-            <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-yellow-300" />
+            <UserStatusBell />
           </div>
-          <div className="flex gap-1 justify-between items-center">
+          <div className="flex gap-1 justify-between items-center cursor-pointer">
             <Image
               src={"/images/testimonials/emma.png"}
-              alt="Emma"
+              alt="User avatar"
               width={30}
-              height={10}
+              height={30}
               className="rounded-full"
             />
-            <h3>Neda Imani</h3>
+            <span className="text-sm font-medium">Neda Imani</span>
             <ChevronDown className="h-4 w-4" />
           </div>
         </div>
