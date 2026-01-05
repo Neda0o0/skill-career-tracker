@@ -19,9 +19,7 @@ const DashboardHeader = () => {
           />
         </div>
         <div className="flex flex-row gap-4 items-center">
-          <div className="relative mr-2">
-            <UserStatusBell />
-          </div>
+          <UserStatusBell />
           <div className="flex gap-1 justify-between items-center cursor-pointer">
             <Image
               src={"/images/testimonials/emma.png"}
