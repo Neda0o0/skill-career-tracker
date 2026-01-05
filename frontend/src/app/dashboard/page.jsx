@@ -1,4 +1,5 @@
 import DashboardHeader from "@/app/dashboard/_components/DashboardHeader";
+import Sidebar from "@/app/dashboard/_components/Sidebar";
 
 const DashboardPage = () => {
   return (
@@ -6,7 +7,8 @@ const DashboardPage = () => {
       {/* DashboardHeader */}
       <DashboardHeader />
 
-      <section>{/* Stats */}</section>
+      {/* Sidebar */}
+      <Sidebar />
 
       <section>{/* Main content */}</section>
     </>
