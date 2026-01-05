@@ -1,17 +1,10 @@
-import DashboardHeader from "@/app/dashboard/_components/DashboardHeader";
-import Sidebar from "@/app/dashboard/_components/Sidebar";
+import WelcomeSection from "@/app/dashboard/_components/WelcomeSection";
 
 const DashboardPage = () => {
   return (
-    <>
-      {/* DashboardHeader */}
-      <DashboardHeader />
-
-      {/* Sidebar */}
-      <Sidebar />
-
-      <section>{/* Main content */}</section>
-    </>
+    <section className="space-y-6">
+      <WelcomeSection />
+    </section>
   );
 };
 
