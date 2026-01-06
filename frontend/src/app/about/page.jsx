@@ -8,7 +8,7 @@ import AboutCTA from "@/app/about/_components/AboutCTA";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
       <Header />
       <main>
         {/* className="max-w-7xl mx-auto px-4" */}

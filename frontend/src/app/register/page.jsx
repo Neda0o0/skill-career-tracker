@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer/Footer";
 
 const Register = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col pt-16">
       <Header />
       <main className="flex-1 grid md:grid-cols-2">
         <RegisterHero />
