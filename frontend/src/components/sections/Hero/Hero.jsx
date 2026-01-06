@@ -6,13 +6,16 @@ const Hero = () => {
     <>
       <div className="bg-white mt-3 p-8 w-full flex items-center shadow-sm hover:shadow-md transition-shadow duration-200 dark:shadow-none">
         <div className="hidden md:flex w-1/2 justify-center">
-          <Image
-            src="/images/laptop.png"
-            alt="laptop"
-            width={500}
-            height={300}
-            className="max-w-full h-auto"
-          />
+          <div className="relative w-125 h-75">
+            <Image
+              src="/images/laptop.png"
+              alt="laptop"
+              fill
+              sizes="(min-width: 768px) 500px"
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4">

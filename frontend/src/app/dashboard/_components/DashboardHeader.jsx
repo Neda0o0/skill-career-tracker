@@ -9,9 +9,17 @@ const DashboardHeader = () => {
   return (
     <header className="w-full shadow-sm z-11">
       <div className="px-2 flex justify-between items-center">
-        <div className="flex items-center">
-          <Image src={"/images/Logo1.png"} alt="Logo" width={120} height={60} />
+        <div className="relative w-30 h-15">
+          <Image
+            src="/images/Logo1.png"
+            alt="Logo"
+            fill
+            sizes="120px"
+            className="object-contain"
+            priority
+          />
         </div>
+
         <div>
           <SearchInput
             inputClassName="h-10 rounded-2xl text-base"
