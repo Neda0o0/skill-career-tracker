@@ -2,19 +2,19 @@ const completed = [
   {
     id: 1,
     label: "Python",
-    img: "",
+    img: "/images/dashboard/courses.png",
     score: 4,
   },
   {
     id: 2,
     label: "Bootstrap",
-    img: "",
+    img: "/images/dashboard/courses.png",
     score: 4,
   },
   {
     id: 3,
     label: "Tailwind",
-    img: "",
+    img: "/images/dashboard/courses.png",
     score: 5,
   },
 ];
