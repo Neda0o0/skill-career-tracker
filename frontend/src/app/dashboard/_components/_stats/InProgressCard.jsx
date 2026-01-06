@@ -4,11 +4,11 @@ import Image from "next/image";
 const InProgressCard = ({ data }) => {
   return (
     <div>
-      <ul className="flex gap-8 flex-col md:flex-row">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
         {data.map(({ id, img, label, progres, lastActivity }) => (
           <li
             key={id}
-            className="p-4 flex flex-col shadow-md rounded-md justify-center items-center gap-2"
+            className="p-4 flex flex-col shadow-md rounded-md justify-center items-center gap-2 w-full max-w-sm mx-auto"
           >
             <Image
               src={img}

@@ -4,11 +4,11 @@ import Image from "next/image";
 const CertificatesCard = ({ data }) => {
   return (
     <div>
-      <ul className="flex gap-8 flex-col md:flex-row">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
         {data.map(({ id, label, img, date }) => (
           <li
             key={id}
-            className="p-4 flex flex-col shadow-md rounded-md justify-center items-center gap-2"
+            className="p-4 flex flex-col shadow-md rounded-md justify-center items-center gap-2 w-full max-w-sm mx-auto"
           >
             <Image
               src={img}
@@ -24,7 +24,7 @@ const CertificatesCard = ({ data }) => {
             <p>
               Completed: <span>{date}</span>
             </p>
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-2">
               <Button className="w-full md:w-auto">View Certificate</Button>
               <Button variant="primaryOutline">Download PDF</Button>
               <Button variant="primaryOutline">Share on Linkedin</Button>

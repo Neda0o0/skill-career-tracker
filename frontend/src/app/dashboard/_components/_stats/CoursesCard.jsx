@@ -6,9 +6,12 @@ const CoursesCard = ({ data }) => {
     <div>
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-medium">Recommended Courses</h2>
-        <ul className="flex gap-8 flex-col md:flex-row">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {data.map(({ id, label, time, img }) => (
-            <li key={id} className=" flex flex-row shadow-md rounded-md gap-5">
+            <li
+              key={id}
+              className="p-4 flex flex-col shadow-md rounded-md justify-center items-center gap-2 w-full max-w-sm mx-auto"
+            >
               <Image
                 src={img}
                 alt={label}
