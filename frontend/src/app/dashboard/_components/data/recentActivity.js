@@ -24,7 +24,7 @@ const recentActivity = [
     id: 4,
     course: "Tailwind",
     type: "certificate",
-    status: "earned",
+    status: "certificates",
     date: "2025-12-15",
   },
 ];
