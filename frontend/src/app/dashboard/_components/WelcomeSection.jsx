@@ -1,7 +1,7 @@
 const WelcomeSection = () => {
   return (
     <section className="space-y-1">
-      <h1 className="md:text-2xl text-md font-semibold">
+      <h1 className="md:text-2xl text-md font-semibold m-5">
         Welcome back, Neda 👋
       </h1>
 
