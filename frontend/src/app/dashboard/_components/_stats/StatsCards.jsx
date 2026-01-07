@@ -20,10 +20,10 @@ const StatsCards = () => {
     <section>
       <div className="space-y-6">
         <SummaryCards summary={summaryData} />
-        <CoursesCard data={courses} />
-        <InProgressCard data={inProgress} />
-        <CompletedCard data={completed} />
-        <CertificatesCard data={certificates} />
+        <CoursesCard data={courses} limit={3} />
+        <InProgressCard data={inProgress} limit={3} />
+        <CompletedCard data={completed} limit={3} />
+        <CertificatesCard data={certificates} limit={2} />
       </div>
     </section>
   );
