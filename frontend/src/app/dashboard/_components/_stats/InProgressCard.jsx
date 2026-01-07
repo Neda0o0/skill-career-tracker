@@ -48,7 +48,7 @@ const InProgressCard = ({ data, limit = 3 }) => {
         {hasMore && (
           <div className="flex justify-center lg:justify-center lg:items-center">
             <Link
-              href="/dashboard/mycourses"
+              href="/dashboard/progress"
               className="text-lg lg:text-2xl font-medium text-purple-600 hover:underline"
             >
               More...
