@@ -20,6 +20,13 @@ const inProgress = [
     progres: 20,
     lastActivity: "Today",
   },
+  {
+    id: 4,
+    img: "/images/dashboard/courses.png",
+    label: "Css",
+    progres: 67,
+    lastActivity: "last month",
+  },
 ];
 
 export default inProgress;
