@@ -18,10 +18,10 @@ export default function Home() {
           <HowItWorks />
           <Testimonials />
           <Pricing />
-          <CTA />
-          <Footer />
         </div>
       </div>
+      <CTA />
+      <Footer />
     </main>
   );
 }
