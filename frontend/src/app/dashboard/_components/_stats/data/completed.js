@@ -17,6 +17,12 @@ const completed = [
     img: "/images/dashboard/courses.png",
     score: 5,
   },
+  {
+    id: 4,
+    label: "Tailwindcss",
+    img: "/images/dashboard/courses.png",
+    score: 3,
+  },
 ];
 
 export default completed;
