@@ -3,6 +3,7 @@
 import { useState } from "react";
 import DashboardHeader from "@/app/dashboard/_components/DashboardHeader";
 import Sidebar from "@/app/dashboard/_components/Sidebar";
+import Breadcrumb from "@/app/dashboard/_components/Breadcrumb";
 
 export default function DashboardLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function DashboardLayout({ children }) {
 
         {/* Main content */}
         <main className="flex-1 p-6 bg-gray-50 min-w-0 overflow-y-auto">
+          <Breadcrumb />
           {children}
         </main>
       </div>
