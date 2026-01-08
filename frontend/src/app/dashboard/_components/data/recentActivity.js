@@ -8,7 +8,7 @@ const recentActivity = [
   },
   {
     id: 2,
-    course: "Python",
+    course: "CSS",
     type: "course",
     status: "completed",
     date: "2026-01-02",
@@ -26,6 +26,13 @@ const recentActivity = [
     type: "certificate",
     status: "certificates",
     date: "2025-12-15",
+  },
+  {
+    id: 5,
+    course: "React Basics",
+    status: "completed",
+    type: "course",
+    date: "2025-01-02",
   },
 ];
 
