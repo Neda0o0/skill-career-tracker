@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   Book,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 
 const Sidebar = ({ open, onClose }) => {
+  const pathname = usePathname();
   const navList = [
     {
       id: 1,
@@ -58,6 +60,11 @@ const Sidebar = ({ open, onClose }) => {
     },
   ];
 
+  const isActive = (href) => {
+    if (href === "/dashboard") return pathname === "/dashboard";
+    return pathname.startsWith(href);
+  };
+
   return (
     <>
       {/* Backdrop (mobile) */}
@@ -99,14 +106,23 @@ const Sidebar = ({ open, onClose }) => {
           <ul className="text-md px-6 py-8 space-y-1">
             {navList.map(({ id, label, icon, href }) => {
               const Icon = icon;
+              const active = isActive(href);
               return (
                 <li key={id}>
                   <Link
                     href={href}
                     onClick={onClose}
-                    className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-gray-100 transition"
+                    className={`flex items-center gap-3 rounded-md px-3 py-2 hover:bg-gray-100 transition ${
+                      active
+                        ? "bg-blue-100 text-blue-700 font-medium"
+                        : "hover:bg-gray-100 text-gray-700"
+                    }`}
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon
+                      className={`h-5 w-5 ${
+                        active ? "text-blue-600" : "text-gray-500"
+                      }`}
+                    />
                     <span>{label}</span>
                   </Link>
                 </li>
