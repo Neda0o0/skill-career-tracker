@@ -2,14 +2,23 @@
 
 import SearchInput from "@/components/SearchInput";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import UserStatusBell from "@/app/dashboard/_components/UserStatusBell";
 
-const DashboardHeader = () => {
+const DashboardHeader = ({ onMenuClick }) => {
   return (
-    <header className="w-full shadow-sm z-11">
-      <div className="px-2 flex justify-between items-center">
-        <div className="relative w-30 h-15">
+    <header className="w-full shadow-sm z-20 bg-white">
+      <div className="px-4 h-16 flex justify-between items-center gap-4">
+        {/* Mobile menu button */}
+        <button
+          onClick={onMenuClick}
+          className="md:hidden p-2 rounded-md hover:bg-gray-100"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+
+        {/* Logo */}
+        <div className="relative w-28 h-10">
           <Image
             src="/images/Logo1.png"
             alt="Logo"
@@ -20,14 +29,18 @@ const DashboardHeader = () => {
           />
         </div>
 
-        <div>
+        {/* Search */}
+        <div className="hidden md:block flex-1 max-w-md">
           <SearchInput
             inputClassName="h-10 rounded-2xl text-base"
             placeholder="Search for.."
           />
         </div>
+
+        {/* Right */}
         <div className="flex flex-row gap-4 items-center">
           <UserStatusBell />
+
           <div className="flex gap-1 justify-between items-center cursor-pointer">
             <Image
               src={"/images/testimonials/emma.png"}

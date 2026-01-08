@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,13 +9,10 @@ import {
   Badge,
   Settings,
   HelpCircle,
-  Menu,
   X,
 } from "lucide-react";
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Sidebar = ({ open, onClose }) => {
   const navList = [
     {
       id: 1,
@@ -64,31 +60,24 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Mobile hamburger button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="lg:hidden fixed top-16 left-4 z-12 p-2 rounded-md bg-white shadow"
-      >
-        <Menu className="w-6 h-6" />
-      </button>
-
       {/* Backdrop (mobile) */}
-      {isOpen && (
+      {open && (
         <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black/40 z-11 lg:hidden"
+          onClick={onClose}
+          className="fixed inset-0 bg-black/40 z-30 md:hidden"
         />
       )}
 
       {/* Sidebar */}
-      <section
-        className={`fixed lg:static top-0 left-0 min-h-screen w-64 pt-5 bg-white shadow-md z-12 lg:z-10 transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0`}
+      <aside
+        className={` fixed md:static top-0 left-0 min-h-screen w-64 bg-white shadow-md z-40 md:z-10 transform transition-transform duration-300 ${
+          open ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0
+        `}
       >
         {/* Close button (mobile) */}
-        <div className="lg:hidden flex justify-end p-4">
-          <button onClick={() => setIsOpen(false)}>
+        <div className="md:hidden flex justify-end p-4">
+          <button onClick={onClose}>
             <X className="w-6 h-6" />
           </button>
         </div>
@@ -107,14 +96,14 @@ const Sidebar = () => {
           </div>
 
           {/* Nav */}
-          <ul className="text-md font-sans px-6 py-8 space-y-1">
+          <ul className="text-md px-6 py-8 space-y-1">
             {navList.map(({ id, label, icon, href }) => {
               const Icon = icon;
               return (
                 <li key={id}>
                   <Link
                     href={href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={onClose}
                     className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-gray-100 transition"
                   >
                     <Icon className="h-5 w-5" />
@@ -125,7 +114,7 @@ const Sidebar = () => {
             })}
           </ul>
         </div>
-      </section>
+      </aside>
     </>
   );
 };
