@@ -18,6 +18,12 @@ const navItems = [
     activeType: "none",
   },
   {
+    label: "Register",
+    href: "/register",
+    visibility: "guest",
+    activeType: "none",
+  },
+  {
     label: "Dashboard",
     href: "/dashboard",
     visibility: "auth", // فقط وقتی لاگین است
