@@ -1,11 +1,43 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+
 import SearchInput from "@/components/SearchInput";
 import Image from "next/image";
 import { ChevronDown, Menu } from "lucide-react";
 import UserStatusBell from "@/app/dashboard/_components/UserStatusBell";
 
 const DashboardHeader = ({ onMenuClick }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const queryFromUrl = searchParams.get("q") || "";
+  const [value, setValue] = useState(queryFromUrl);
+
+  // Sync input when URL changes (back / forward navigation)
+  useEffect(() => {
+    setValue(queryFromUrl);
+  }, [queryFromUrl]);
+
+  const handleSearchChange = (e) => {
+    const nextValue = e.target.value;
+    setValue(nextValue);
+
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (nextValue) {
+      params.set("q", nextValue);
+    } else {
+      params.delete("q");
+    }
+
+    router.replace(`${pathname}?${params.toString()}`, {
+      scroll: false,
+    });
+  };
+
   return (
     <header className="w-full shadow-sm z-20 bg-white">
       <div className="px-4 h-16 flex justify-between items-center gap-4">
@@ -32,6 +64,8 @@ const DashboardHeader = ({ onMenuClick }) => {
         {/* Search */}
         <div className="hidden md:block flex-1 max-w-md">
           <SearchInput
+            value={value}
+            onChange={handleSearchChange}
             inputClassName="h-10 rounded-2xl text-base"
             placeholder="Search for.."
           />

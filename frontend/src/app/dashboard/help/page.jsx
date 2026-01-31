@@ -21,6 +21,7 @@ const Help = () => {
 
   return (
     <section className="flex flex-col gap-5">
+      {/* Header مخصوص Help */}
       <HelpHeader />
 
       <QuickHelpCards items={quickHelpCards} />

@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
+import HighlightText from "@/components/HighlightText";
 
 const PopularArticles = ({ items, searchQuery }) => {
   const filteredItems = useMemo(() => {
@@ -23,7 +24,7 @@ const PopularArticles = ({ items, searchQuery }) => {
               href={`/help/${item.slug}`}
               className="block p-3 rounded-md border hover:bg-gray-50 transition"
             >
-              {item.label}
+              <HighlightText text={item.label} highlight={searchQuery} />
             </Link>
           </li>
         ))}

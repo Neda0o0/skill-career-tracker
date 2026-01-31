@@ -1,21 +1,24 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import FaqItem from "./FaqItem";
+import HighlightText from "@/components/HighlightText";
 
 const splitIntoColumns = (items) => {
   const left = [];
   const right = [];
-
   items.forEach((item, index) => {
     if (index % 2 === 0) left.push(item);
     else right.push(item);
   });
-
   return [left, right];
 };
 
-const FaqSection = ({ items, searchQuery }) => {
+const FaqSection = ({ items }) => {
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get("q") || "";
+
   const [activeId, setActiveId] = useState(null);
 
   const filteredItems = useMemo(() => {
@@ -49,7 +52,9 @@ const FaqSection = ({ items, searchQuery }) => {
           {leftColumn.map((item) => (
             <FaqItem
               key={item.id}
-              question={item.label}
+              question={
+                <HighlightText text={item.label} highlight={searchQuery} />
+              }
               answer={item.description}
               isOpen={activeId === item.id}
               onToggle={() => toggle(item.id)}
@@ -61,7 +66,9 @@ const FaqSection = ({ items, searchQuery }) => {
           {rightColumn.map((item) => (
             <FaqItem
               key={item.id}
-              question={item.label}
+              question={
+                <HighlightText text={item.label} highlight={searchQuery} />
+              }
               answer={item.description}
               isOpen={activeId === item.id}
               onToggle={() => toggle(item.id)}
