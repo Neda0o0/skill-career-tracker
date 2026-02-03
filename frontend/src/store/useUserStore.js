@@ -38,6 +38,9 @@ export const useUserStore = create((set, get) => ({
 
   /* Fetch user profile */
   fetchProfile: async () => {
+    // جلوگیری از fetch دوباره
+    if (get().profile) return;
+
     try {
       set({ loading: true, error: null });
       const data = await mockFetchProfile();
@@ -50,47 +53,63 @@ export const useUserStore = create((set, get) => ({
     }
   },
 
-  /* Update profile fields (name, email, etc...) */
+  /* Update profile fields (optimistic + rollback) */
   updateProfile: async (partialData) => {
+    const prevProfile = get().profile;
+
+    if (!prevProfile) return;
+
     try {
-      // Optimistic Update
-      set((state) => ({
+      // optimistic update
+      set({
         profile: {
-          ...state.profile,
+          ...prevProfile,
           ...partialData,
         },
-      }));
+        error: null,
+      });
 
       // TODO:
       // await api.updateProfile(partialData);
     } catch (err) {
       console.error(err);
-      set({ error: "Failed to update profile" });
 
-      // Optional:
-      // rollback using get().profile snapshot if needed
+      // rollback واقعی
+      set({
+        profile: prevProfile,
+        error: "Failed to update profile",
+      });
     }
   },
 
   /* Update avatar */
   updateAvatar: async (avatarUrl) => {
+    const prevProfile = get().profile;
+
+    if (!prevProfile) return;
+
     try {
-      set((state) => ({
+      set({
         profile: {
-          ...state.profile,
+          ...prevProfile,
           avatar: avatarUrl,
         },
-      }));
+        error: null,
+      });
 
       // TODO:
       // await api.uploadAvatar(avatarFile);
     } catch (err) {
       console.error(err);
-      set({ error: "Failed to update avatar" });
+
+      set({
+        profile: prevProfile,
+        error: "Failed to update avatar",
+      });
     }
   },
 
-  /* Reset store (logout, etc...) */
+  /* Reset store (logout, token expire, etc...) */
   resetProfile: () => {
     set({
       profile: null,
