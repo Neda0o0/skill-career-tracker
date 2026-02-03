@@ -23,7 +23,7 @@ const AboutTrust = () => {
     },
   ];
   return (
-    <section className="bg-blue-100 p-10">
+    <section className="bg-blue-100 p-10 dark:bg-purple-800">
       <div className="max-w-7xl mx-auto px-4 flex flex-col gap-8">
         <div className="flex flex-col gap-4 justify-center items-center">
           {/* Headline (Trust Anchor) */}

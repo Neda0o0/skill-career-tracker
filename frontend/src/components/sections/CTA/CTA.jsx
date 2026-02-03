@@ -4,7 +4,7 @@ const CTA = () => {
   return (
     <section
       id="cta"
-      className="w-full bg-blue-500 flex flex-col justify-center items-center p-4 mt-5"
+      className="w-full bg-purple-600 dark:bg-purple-800 flex flex-col justify-center items-center p-4 mt-5"
     >
       <h2 className="mt-3 text-2xl font-semibold tracking-tight text-gray-200 dark:text-white">
         Ready to advance your career?

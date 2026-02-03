@@ -21,7 +21,9 @@ const Pricing = () => {
                 item.isPopular ? "ring-2 ring-indigo-500" : "border-gray-200"
               }`}
             >
-              <h3 className="font-semibold text-gray-900">{item.title}</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                {item.title}
+              </h3>
               {item.price !== null ? (
                 <span className="block mt-1 font-bold">
                   ${item.price}
@@ -32,7 +34,7 @@ const Pricing = () => {
               ) : (
                 <span className="block mt-1 font-bold">{item.priceCustom}</span>
               )}
-              <ul className="mt-3 space-y-2 text-sm text-gray-600">
+              <ul className="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-100">
                 {item.description.map((desc, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <span className="text-green-500">✔</span>

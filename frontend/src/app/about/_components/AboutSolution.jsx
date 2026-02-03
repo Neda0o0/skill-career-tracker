@@ -28,7 +28,7 @@ const AboutSolution = () => {
     },
   ];
   return (
-    <section className="bg-blue-100 p-5">
+    <section className="bg-blue-100 p-5 dark:bg-purple-800">
       <div className="max-w-7xl mx-auto px-4 flex md:flex-row flex-col">
         <div className="p-2 flex flex-col gap-4 md:justify-center mb-3">
           {/* Headline (Solution Promise) */}

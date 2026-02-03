@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 const Hero = () => {
   return (
     <>
-      <div className="bg-white mt-3 p-8 w-full flex items-center shadow-sm hover:shadow-md transition-shadow duration-200 dark:shadow-none">
+      <div className="bg-white dark:bg-purple-800 mt-3 p-8 w-full flex items-center shadow-sm hover:shadow-md transition-shadow duration-200 dark:shadow-none">
         <div className="hidden md:flex w-1/2 justify-center">
           <div className="relative w-125 h-75">
             <Image

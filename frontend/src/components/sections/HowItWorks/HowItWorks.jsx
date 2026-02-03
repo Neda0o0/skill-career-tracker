@@ -16,8 +16,12 @@ const HowItWorks = () => {
         <ul className="grid md:grid-cols-3 gap-5">
           {HowItWorksData.map((item) => (
             <li key={item.id} className="p-4">
-              <h3 className="font-semibold text-gray-900">{item.title}</h3>
-              <p className="mt-2 text-sm text-gray-600">{item.description}</p>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-100">
+                {item.description}
+              </p>
             </li>
           ))}
         </ul>

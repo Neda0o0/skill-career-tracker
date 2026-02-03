@@ -36,9 +36,13 @@ const Testimonials = () => {
                   <RatingStars rating={item.rating} />
                 </span>
               </div>
-              <h3 className="mt-2 font-semibold text-gray-900">{item.name}</h3>
-              <p className="mt-2 text-sm text-gray-600">{item.comment}</p>
-              <span className="text-xs font-sans text-gray-500">
+              <h3 className="mt-2 font-semibold text-gray-900 dark:text-gray-100">
+                {item.name}
+              </h3>
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-100">
+                {item.comment}
+              </p>
+              <span className="text-xs font-sans text-gray-500 dark:text-gray-400">
                 {item.role}
               </span>
             </li>

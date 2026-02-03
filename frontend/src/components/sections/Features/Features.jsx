@@ -9,7 +9,7 @@ const Features = () => {
       <span className="text-xs font-medium tracking-widest text-gray-500">
         FEATURES
       </span>
-      <h2 className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
+      <h2 className="mt-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
         Everything you need to grow
       </h2>
       <div className="mt-6">

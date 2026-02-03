@@ -2,7 +2,7 @@ import Button from "@/components/ui/Button";
 
 const RegisterForm = () => {
   return (
-    <section className="bg-slate-200 flex items-center justify-center">
+    <section className="bg-purple-100 dark:bg-black flex items-center justify-center">
       <div className="w-full max-w-md bg-white rounded-xl mt-4 mb-4 shadow-lg p-6 md:p-8 flex flex-col gap-8">
         {/* Header */}
         <header className="text-center space-y-2">
