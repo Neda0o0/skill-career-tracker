@@ -27,7 +27,7 @@ const RegisterHero = () => {
     },
   ];
   return (
-    <section className="bg-purple-400 dark:bg-purple-600 h-full flex flex-col">
+    <section className=" h-full flex flex-col">
       <div className="p-5 flex flex-col gap-10 flex-1 justify-between">
         {/* Brand */}
         <div className=" flex items-center gap-2">
