@@ -62,7 +62,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="flex flex-col justify-center items-center p-4 glass rounded-3xl"
+      className="flex flex-col justify-center items-center p-4 glass rounded-3xl mt-5"
     >
       <span className="text-xs font-medium tracking-widest text-foreground/60 uppercase">
         Testimonials
