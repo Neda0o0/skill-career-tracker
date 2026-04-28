@@ -73,13 +73,13 @@ const Footer = () => {
   const { footerLinks, socialLinks, pageLinks } = footerData;
 
   return (
-    <footer className="w-full glass mt-16">
+    <footer className="w-full glass mt-10">
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between gap-10">
-        <h2 className="text-accent/80 font-semibold text-2xl mb-6 text-center md:text-left">
+        <h2 className="text-accent/80 font-semibold italic text-3xl mb-6 text-center md:text-left">
           SkillTrack
         </h2>
 
-        <div className="flex flex-col md:flex-row justify-between gap-10 text-center md:text-left w-full">
+        <div className="flex flex-col md:flex-row justify-evenly gap-10 text-center md:text-left w-full">
           <FooterList title="Explore">
             {footerLinks.map((item) => (
               <li key={item.href}>
@@ -125,10 +125,9 @@ const Footer = () => {
             ))}
           </FooterList>
         </div>
-
-        <div className="mt-10 text-center text-xs text-foreground/60 md:text-left w-full">
-          © {new Date().getFullYear()} SkillTrack. All rights reserved.
-        </div>
+      </div>
+      <div className="mt-10 text-center text-xs text-foreground/60 w-full">
+        © {new Date().getFullYear()} SkillTrack. All rights reserved.
       </div>
     </footer>
   );
