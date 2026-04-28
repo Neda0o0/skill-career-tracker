@@ -57,7 +57,7 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="flex flex-col justify-center items-center p-8 mt-12 glass rounded-3xl"
+      className="flex flex-col justify-center items-center p-8 mt-5 glass rounded-3xl"
     >
       <span className="text-xs font-medium tracking-widest text-foreground/60">
         PRICING
