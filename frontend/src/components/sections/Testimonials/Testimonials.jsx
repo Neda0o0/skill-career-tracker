@@ -62,7 +62,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="flex flex-col justify-center items-center p-4 glass rounded-3xl mt-5"
+      className="flex flex-col justify-center items-center p-4"
     >
       <span className="text-xs font-medium tracking-widest text-foreground/60 uppercase">
         Testimonials
@@ -73,7 +73,7 @@ const Testimonials = () => {
       <h4 className="mt-2 text-md font-medium tracking-tight text-foreground/80">
         See what users say about their growth journey
       </h4>
-      <div className="mt-6 w-full">
+      <div className="mt-8 w-full">
         <ul className="grid md:grid-cols-3 gap-5">
           {TestimonialsData.map((item) => (
             <li
@@ -86,7 +86,7 @@ const Testimonials = () => {
                   alt={item.name}
                   width={48}
                   height={48}
-                  className="rounded-full object-cover mt-2 mb-4"
+                  className="rounded-full object-cover mt-2 mb-4 no-blur"
                 />
                 <span className="mt-2 mb-4 mr-5">
                   <RatingStars rating={item.rating} />
