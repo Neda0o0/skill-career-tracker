@@ -45,8 +45,8 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <CTA />
-        <Footer />
       </div>
+      <Footer />
     </main>
   );
 }
