@@ -28,59 +28,74 @@ const AboutSolution = () => {
     },
   ];
   return (
-    <section className="bg-blue-100 p-5 dark:bg-purple-800">
-      <div className="max-w-7xl mx-auto px-4 flex md:flex-row flex-col">
-        <div className="p-2 flex flex-col gap-4 md:justify-center mb-3">
-          {/* Headline (Solution Promise) */}
-          <h1 className="text-2xl font-semibold">
-            A clearer way to grow — built around you.
-          </h1>
+    <section className="max-w-7xl mx-auto flex flex-col md:flex-row">
+      <div className="p-2 flex flex-col gap-4 md:justify-center mb-3 md:w-1/2 lg:w-2/5">
+        <h2 className="text-2xl font-semibold text-white text-shadow-md">
+          A clearer way to grow — built around you!
+        </h2>
+        <p className="font-medium text-justify">
+          SkillTrack turns learning into a guided journey, not a guessing game.
+          Instead of scattered resources and unclear outcomes, we provide
+          structure, visibility, and direction — all in one place. Every learner
+          starts with different goals, strengths, and pace. That’s why
+          SkillTrack adapts to you, not the other way around.
+        </p>
+        <ul>
+          {coreSolutionPillars.map(({ id, label, description }, index) => {
+            let borderDetails = "";
+            let firstBorder =
+              "border-amber-200 border-r-2 border-b-2 rounded-br-2xl shadow-md shadow-amber-100";
+            let secondBorder =
+              "border-amber-200 border-l-2 border-b-2 rounded-bl-2xl shadow-md shadow-amber-100";
+            if (id === "unique-id-1" || index === 0) {
+              borderDetails = firstBorder;
+            } else if (id === "unique-id-2" || index === 1) {
+              borderDetails = secondBorder;
+            } else if (id === "unique-id-3" || index === 2) {
+              borderDetails = firstBorder;
+            } else if (id === "unique-id-4" || index === 3) {
+              borderDetails = secondBorder;
+            }
 
-          {/* Solution Context (What We Do) */}
-          <p>
-            SkillTrack turns learning into a guided journey, not a guessing
-            game. Instead of scattered resources and unclear outcomes, we
-            provide structure, visibility, and direction — all in one place.
-            Every learner starts with different goals, strengths, and pace.
-            That’s why SkillTrack adapts to you, not the other way around.
-          </p>
-
-          {/* Core Solution Pillars (Scannable) */}
-          <ul>
-            {coreSolutionPillars.map(({ id, label, description }) => (
-              <li key={id} className="p-2">
-                <h2 className="text-lg font-semibold">{label}</h2>
-                <p>{description}</p>
+            return (
+              <li key={id} className={`p-2 ${borderDetails}`}>
+                <h3 className="text-xl font-semibold">{label}</h3>
+                <p className="font-medium px-2 py-2">{description}</p>
               </li>
-            ))}
-          </ul>
+            );
+          })}
+        </ul>
 
-          {/* Outcome / Vision (Closing Bridge) */}
-          <p>
-            With SkillTrack, learning becomes intentional — and progress finally
-            feels real.
-          </p>
-        </div>
+        <p className="border-b-2 border-blue-300 shadow-md shadow-blue-200 px-2 py-2 font-medium">
+          With SkillTrack, learning becomes intentional — and progress finally
+          feels real.
+        </p>
+      </div>
+      <div className="md:w-1/2 lg:w-3/5 flex items-center justify-center">
         <Image
           src={"/images/about/solution.png"}
           alt="Pathway to Success"
           width={900}
           height={100}
+          className="object-contain w-full h-auto"
         />
-        {/* <figure className="flex flex-col items-center">
-          <Image
-            src={"/images/about/solution.png"}
-            alt="Pathway to Success"
-            width={900}
-            height={100}
-          />
-          <figcaption className="text-sm text-gray-500">
-            Pathway to Success
-          </figcaption>
-        </figure> */}
       </div>
     </section>
   );
 };
 
 export default AboutSolution;
+
+{
+  /* <figure className="flex flex-col items-center">
+  <Image
+    src={"/images/about/solution.png"}
+    alt="Pathway to Success"
+    width={900}
+    height={100}
+  />
+  <figcaption className="text-sm text-gray-500">
+    Pathway to Success
+  </figcaption>
+</figure> */
+}

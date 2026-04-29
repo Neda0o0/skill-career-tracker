@@ -23,41 +23,34 @@ const AboutTrust = () => {
     },
   ];
   return (
-    <section className="bg-blue-100 p-10 dark:bg-purple-800">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col gap-8">
-        <div className="flex flex-col gap-4 justify-center items-center">
-          {/* Headline (Trust Anchor) */}
-          <h2 className="text-2xl font-semibold">
-            Trusted by learners who value clarity and progress.
-          </h2>
-
-          {/* Credibility Context (Why Trust Matters) */}
-          <p>
-            Building skills takes time, focus, and commitment. That’s why trust
-            matters — learners need to know their effort is supported by a
-            platform that grows with them. SkillTrack is built for long-term
-            learning, not short-term engagement.
-          </p>
-        </div>
-
-        {/* Proof Points (Scannable Metrics) */}
-        <ul className="flex justify-between gap-8 flex-col md:flex-row">
-          {proofPoints.map(({ id, label, description }) => (
-            <li key={id} className="shadow-md rounded-2xl p-5">
-              <h3 className="text-lg font-semibold flex justify-center">
-                {label}
-              </h3>
-              <p>{description}</p>
-            </li>
-          ))}
-        </ul>
-
-        {/* Closing Statement (Reassurance) */}
-        <p className="flex justify-center italic">
-          Trust is earned over time — and we’re committed to earning it every
-          day.
+    <section className="max-w-7xl mx-auto px-4 flex flex-col gap-8">
+      <div className="flex flex-col gap-4 justify-center items-center">
+        <h2 className="text-2xl font-semibold text-white text-shadow-md">
+          Trusted by learners who value clarity and progress!
+        </h2>
+        <p className="text-white/130 font-medium">
+          Building skills takes time, focus, and commitment. That’s why trust
+          matters — learners need to know their effort is supported by a
+          platform that grows with them. SkillTrack is built for long-term
+          learning, not short-term engagement.
         </p>
       </div>
+      <ul className="flex justify-between gap-8 flex-col md:flex-row">
+        {proofPoints.map(({ id, label, description }) => (
+          <li
+            key={id}
+            className="shadow-md rounded-2xl rounded-b-3xl border-2 border-t-amber-200 border-b-amber-200 p-5 glass"
+          >
+            <h3 className="text-lg font-bold text-center text-white/150">
+              {label}
+            </h3>
+            <p className="font-normal mt-4 text-white/130">{description}</p>
+          </li>
+        ))}
+      </ul>
+      <p className="flex justify-center italic font-serif">
+        Trust is earned over time — and we’re committed to earning it every day.
+      </p>
     </section>
   );
 };

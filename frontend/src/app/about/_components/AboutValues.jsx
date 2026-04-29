@@ -35,33 +35,31 @@ const AboutValues = () => {
       <div className="max-w-7xl mx-auto px-4 flex flex-col gap-8">
         <div className="flex flex-col gap-4 justify-center items-center">
           {/* Headline (Belief) */}
-          <h2 className="text-2xl font-semibold">
-            What we believe shapes everything we build.
+          <h2 className="text-2xl font-semibold text-white text-shadow-md">
+            What we believe shapes everything we build!
           </h2>
-
-          {/* Values Context (Why Values Matter) */}
-          <p>
+          <p className="text-white/130 font-medium">
             At SkillTrack, values are not statements on a wall. They guide how
             we design experiences, make decisions, and support learners at every
             step. These principles keep us focused on what truly matters: real
             growth, real people, and real outcomes.
           </p>
         </div>
-
-        {/* Core Values (Scannable) */}
         <ul className="flex justify-between gap-8 flex-col md:flex-row">
           {coreValues.map(({ id, label, description }) => (
-            <li key={id} className="shadow-md rounded-2xl p-5">
-              <h3 className="text-lg font-semibold flex justify-center">
+            <li
+              key={id}
+              className="shadow-md rounded-2xl rounded-b-3xl border-2 border-t-amber-200 border-b-amber-200 p-5 glass"
+            >
+              <h3 className="font-bold justify-center text-white/150">
                 {label}
               </h3>
-              <p>{description}</p>
+              <p className="font-normal mt-4 text-white/130">{description}</p>
             </li>
           ))}
         </ul>
 
-        {/* Closing Statement (Identity) */}
-        <p className="flex justify-center italic">
+        <p className="flex justify-center italic font-serif">
           These values shape how SkillTrack grows — alongside the people who use
           it.
         </p>
