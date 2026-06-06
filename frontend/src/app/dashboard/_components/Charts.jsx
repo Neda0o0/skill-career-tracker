@@ -8,9 +8,8 @@ const Charts = ({ summary }) => {
   const maxValue = Math.max(...chartData.map((item) => item.value));
 
   return (
-    <section className="p-6 bg-white rounded-xl shadow-sm w-full max-w-full overflow-hidden">
-      <h2 className="text-lg font-semibold mb-4">Learning Progress Overview</h2>
-
+    <section className="p-4 bg-white rounded-xl shadow-sm w-full max-w-full overflow-hidden">
+      <h2 className="text-lg font-semibold mb-6">Learning Progress Overview</h2>
       <ul className="space-y-3">
         {chartData.map(({ label, value }) => (
           <li key={label} className="flex items-center gap-4 min-w-0">

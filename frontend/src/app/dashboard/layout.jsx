@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }) {
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
         {/* Main content */}
-        <main className="flex-1 p-6 bg-gray-50 min-w-0 overflow-y-auto">
+        <main className="flex-1 px-4 bg-gray-50 min-w-0 overflow-y-auto">
           <Breadcrumb />
           {children}
         </main>

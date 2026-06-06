@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
 import SearchInput from "@/components/SearchInput";
 import Image from "next/image";
 import { ChevronDown, Menu } from "lucide-react";
@@ -12,7 +11,6 @@ const DashboardHeader = ({ onMenuClick }) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
   const queryFromUrl = searchParams.get("q") || "";
   const [value, setValue] = useState(queryFromUrl);
 
